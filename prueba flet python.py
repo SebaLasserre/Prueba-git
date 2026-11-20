@@ -1,0 +1,66 @@
+import flet as ft
+
+def main(page: ft.Page):
+    tabla= ft.DataTable(
+        columns=[
+            ft.DataColumn(ft.Text("nombre")),
+            ft.DataColumn(ft.Text("edad")),
+            ft.DataColumn(ft.Text("sexo"))
+        ],
+        rows=[
+            ft.DataRow(
+                cells=[
+                    ft.DataCell(ft.Text("fernando")),
+                    ft.DataCell(ft.Text("25")),
+                    ft.DataCell(ft.Text("masculino"))
+                ]
+            ),
+            ft.DataRow(
+                cells=[
+                    ft.DataCell(ft.Text("josefa")),
+                    ft.DataCell(ft.Text("42")),
+                    ft.DataCell(ft.Text("femenino"))
+                ]
+            ),
+            ft.DataRow(
+                cells=[
+                    ft.DataCell(ft.Text("aristobulo")),
+                    ft.DataCell(ft.Text("19")),
+                    ft.DataCell(ft.Text("masculino"))
+                ]
+            ),
+            ft.DataRow(
+                cells=[
+                    ft.DataCell(ft.Text("Pancracio")),
+                    ft.DataCell(ft.Text("10")),
+                    ft.DataCell(ft.Text("masculino"))
+                ]
+            ),
+            ft.DataRow(
+                cells=[
+                    ft.DataCell(ft.Text("Joseline")),
+                    ft.DataCell(ft.Text("22")),
+                    ft.DataCell(ft.Text("femenino"))
+                ]
+            ),
+            ft.DataRow(
+                cells=[
+                    ft.DataCell(ft.Text("Soledita")),
+                    ft.DataCell(ft.Text("49")),
+                    ft.DataCell(ft.Text("femenino"))
+                ]
+            ),
+        ],
+    )
+
+    page.add(tabla)
+    tabla.rows.append(
+        ft.DataRow(
+            cells=[
+                ft.DataCell(ft.Text("Pedro")),
+                ft.DataCell(ft.Text("40")),
+                ft.DataCell(ft.Text("masculino"))
+            ]
+        )
+    )
+ft.run(main)
